@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Apartamento com varanda à venda | AMD Construtora</title>
-<meta name="description" content="Apartamento com varanda à venda por R$ 185.000, abaixo da avaliação de R$ 195.000. Aceita financiamento pela Caixa. AMD Construtora, João Pessoa - PB.">
+<title>Apartamentos e casas à venda | AMD Construtora</title>
+<meta name="description" content="Apartamentos e casas à venda no Bairro das Indústrias, João Pessoa - PB. AMD Construtora. Aceita financiamento pela Caixa nos apartamentos.">
 <style>
   :root{
     --azul:#0b4fd6;
@@ -25,66 +25,64 @@
   .logo{height:46px;width:auto}
   .btn-topo{background:var(--verde);color:#fff;text-decoration:none;padding:10px 16px;border-radius:8px;font-weight:700;font-size:.95rem}
 
+  /* Botões */
+  .btn{display:inline-block;background:var(--verde);color:#fff;text-decoration:none;padding:16px 26px;border-radius:10px;font-weight:800;font-size:1.05rem;margin-top:22px;border:0;cursor:pointer}
+  .btn:hover{filter:brightness(.95)}
+  .wa-ic{width:22px;height:22px;vertical-align:-5px;margin-right:8px;display:inline-block}
+  .btn-topo .wa-ic{width:18px;height:18px;vertical-align:-3px;margin-right:6px}
+
   /* Hero */
-  .hero{position:relative;color:#fff;min-height:480px;display:flex;align-items:flex-end;background:#000}
+  .hero{position:relative;color:#fff;min-height:420px;display:flex;align-items:flex-end;background:#000}
   .hero img{position:absolute;inset:0;height:100%;object-fit:cover;opacity:.55}
   .hero .conteudo{position:relative;padding:60px 20px;max-width:1100px;margin:0 auto;width:100%}
   .tag{display:inline-block;background:var(--azul);padding:6px 12px;border-radius:999px;font-size:.85rem;font-weight:700;margin-bottom:14px}
   .hero h1{font-size:2.3rem;line-height:1.15;margin-bottom:14px}
   .hero p.sub{font-size:1.1rem;max-width:620px;opacity:.95}
-  .preco{margin-top:22px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
-  .preco .valor{font-size:2.2rem;font-weight:800}
-  .preco .aval{font-size:.95rem;background:rgba(255,255,255,.15);padding:8px 12px;border-radius:8px}
-  .btn{display:inline-block;background:var(--verde);color:#fff;text-decoration:none;padding:16px 26px;border-radius:10px;font-weight:800;font-size:1.05rem;margin-top:22px}
-  .btn:hover{filter:brightness(.95)}
-  .wa-ic{width:22px;height:22px;vertical-align:-5px;margin-right:8px;display:inline-block}
-  .btn-topo .wa-ic{width:18px;height:18px;vertical-align:-3px;margin-right:6px}
 
   section{padding:56px 0}
   section h2{font-size:1.7rem;color:var(--azul-escuro);margin-bottom:10px}
   section .lead{color:#555;margin-bottom:26px;max-width:720px}
   .fundo-claro{background:var(--claro)}
 
-  /* Destaques */
-  .destaques{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
-  .card{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 10px rgba(0,0,0,.06)}
-  .card strong{display:block;font-size:1.1rem;color:var(--azul);margin-bottom:6px}
+  /* Opções de unidade */
+  .opcoes{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+  .opcao{background:#fff;border:3px solid transparent;border-radius:14px;overflow:hidden;cursor:pointer;text-align:left;padding:0;box-shadow:0 2px 10px rgba(0,0,0,.08);font:inherit;color:inherit}
+  .opcao img{height:150px;object-fit:cover}
+  .opcao .txt{display:block;padding:12px 14px}
+  .opcao .op-tipo{display:block;font-weight:700;color:var(--azul-escuro)}
+  .opcao .op-preco{display:block;color:var(--azul);font-weight:800;margin-top:2px}
+  .opcao.ativo{border-color:var(--azul)}
+  .opcao:focus-visible{outline:3px solid var(--azul);outline-offset:2px}
 
-  /* Galeria */
-  .galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
-  .galeria img{border-radius:10px;height:230px;object-fit:cover}
-  .galeria figure{position:relative}
-  .galeria figcaption{position:absolute;left:10px;bottom:10px;background:rgba(0,0,0,.6);color:#fff;font-size:.85rem;padding:4px 10px;border-radius:6px}
-
-  /* Financiamento */
-  .fin{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
-  .fin ul{list-style:none}
-  .fin li{padding:10px 0;border-bottom:1px solid #e3e8f0}
-  .fin li:before{content:"✓ ";color:var(--verde);font-weight:800}
-  @media(max-width:760px){.fin{grid-template-columns:1fr}}
-
-  /* Outra unidade */
-  .unidade{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px}
-  .unidade .preco-m{font-size:1.5rem;font-weight:800;color:var(--azul)}
+  /* Detalhe */
+  .detalhe{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:start}
+  .galeria{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .galeria img{border-radius:10px;height:170px;object-fit:cover}
+  .info .tipo{display:inline-block;background:var(--azul);color:#fff;padding:5px 11px;border-radius:999px;font-size:.8rem;font-weight:700;margin-bottom:10px}
+  .info h3{font-size:1.6rem;color:var(--azul-escuro);margin-bottom:12px}
+  .info .preco{font-size:2rem;font-weight:800;color:var(--cinza)}
+  .info .aval{display:inline-block;margin-top:6px;background:#e7eefc;color:var(--azul-escuro);padding:6px 10px;border-radius:8px;font-size:.92rem}
+  .info .end{margin-top:16px;color:#444}
+  .info .financ{margin-top:14px;padding:12px 14px;background:var(--claro);border-radius:10px;font-size:.95rem}
+  .info .btn{margin-top:20px}
+  @media(max-width:820px){.detalhe{grid-template-columns:1fr}.galeria img{height:140px}}
 
   /* CTA final */
   .cta{background:var(--azul-escuro);color:#fff;text-align:center}
   .cta h2{color:#fff}
   .cta p{opacity:.9;margin-bottom:6px}
-  .cta .btn{margin-top:14px}
 
   /* Rodapé */
   footer{background:#0a1d4a;color:#cfd8ea;padding:30px 0;font-size:.9rem}
   footer .container{display:grid;gap:6px}
   footer strong{color:#fff}
 
-  /* Botão flutuante */
+  /* Botão flutuante redondo */
   .flutuante{position:fixed;right:18px;bottom:18px;width:62px;height:62px;border-radius:50%;background:var(--verde);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.25);z-index:20}
   .flutuante .wa-ic{width:36px;height:36px;margin:0}
 
   @media(max-width:640px){
     .hero h1{font-size:1.8rem}
-    .preco .valor{font-size:1.8rem}
     .logo{height:38px}
     section{padding:40px 0}
   }
@@ -95,7 +93,7 @@
 <header>
   <div class="container">
     <img class="logo" src="assets/logo-amd.png" alt="AMD Construtora">
-    <a class="btn-topo" href="https://wa.me/5583998930359?text=Ol%C3%A1!%20Bom%20dia!%20Vi%20sua%20p%C3%A1gina%20de%20an%C3%BAncio%20da%20venda%20do%20apartamento%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener"><svg class="wa-ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>Falar no WhatsApp</a>
+    <a class="btn-topo" href="https://wa.me/5583998930359?text=Ol%C3%A1!%20Bom%20dia!%20Vi%20sua%20p%C3%A1gina%20de%20an%C3%BAncio%20da%20venda%20do%20im%C3%B3vel%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener"><svg class="wa-ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>Falar no WhatsApp</a>
   </div>
 </header>
 
@@ -103,74 +101,50 @@
   <img src="assets/hero-fachada.jpg" alt="Fachada do prédio">
   <div class="conteudo">
     <span class="tag">Disponível para venda</span>
-    <h1>Apartamento com varanda</h1>
-    <p class="sub">R. China, 138 – Bairro das Indústrias, João Pessoa – PB. Imóvel novo, com acabamento em porcelanato e possibilidade de financiamento pela Caixa.</p>
-    <div class="preco">
-      <div class="valor">R$ 185.000</div>
-      <div class="aval">Avaliado em R$ 195.000</div>
-    </div>
-    <a class="btn" href="https://wa.me/5583998930359?text=Ol%C3%A1!%20Bom%20dia!%20Vi%20sua%20p%C3%A1gina%20de%20an%C3%BAncio%20da%20venda%20do%20apartamento%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener"><svg class="wa-ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>Quero saber mais pelo WhatsApp</a>
+    <h1>Apartamentos e casas à venda</h1>
+    <p class="sub">Bairro das Indústrias, João Pessoa – PB. Escolha uma unidade abaixo para ver fotos, valor e endereço.</p>
+    <a class="btn" href="#unidades">Ver unidades disponíveis</a>
   </div>
 </div>
 
-<section>
+<section id="unidades">
   <div class="container">
-    <h2>Por que este apartamento</h2>
-    <p class="lead">Valor abaixo da avaliação e um apartamento novo, com varanda e acabamento pronto.</p>
-    <div class="destaques">
-      <div class="card"><strong>R$ 185.000</strong>Preço de venda, abaixo da avaliação de R$ 195.000.</div>
-      <div class="card"><strong>Varanda</strong>Porta de vidro com vista para a rua e a vizinhança.</div>
-      <div class="card"><strong>Porcelanato</strong>Piso e revestimento claros em todos os ambientes.</div>
-      <div class="card"><strong>Financiamento</strong>Possibilidade de financiamento pela Caixa Econômica Federal.</div>
+    <h2>Escolha sua unidade</h2>
+    <p class="lead">Toque em uma opção para ver as fotos e as informações.</p>
+    <div class="opcoes" id="opcoes">
+      <button type="button" class="opcao" data-id="apto-varanda">
+        <img src="assets/hero-fachada.jpg" alt="Fachada do prédio com apartamentos">
+        <span class="txt"><span class="op-tipo">Apartamento com varanda</span><span class="op-preco">R$ 185.000</span></span>
+      </button>
+      <button type="button" class="opcao" data-id="apto">
+        <img src="assets/hero-fachada.jpg" alt="Fachada do prédio com apartamentos">
+        <span class="txt"><span class="op-tipo">Apartamento</span><span class="op-preco">R$ 180.000</span></span>
+      </button>
+      <button type="button" class="opcao" data-id="casa-1">
+        <img src="assets/casa-13.jpg" alt="Fachada da casa">
+        <span class="txt"><span class="op-tipo">Casa</span><span class="op-preco">Consulte o valor</span></span>
+      </button>
+      <button type="button" class="opcao" data-id="casa-2">
+        <img src="assets/casa-13.jpg" alt="Fachada da casa">
+        <span class="txt"><span class="op-tipo">Casa</span><span class="op-preco">Consulte o valor</span></span>
+      </button>
     </div>
   </div>
 </section>
 
 <section class="fundo-claro">
   <div class="container">
-    <h2>Conheça o apartamento</h2>
-    <p class="lead">Fotos reais do imóvel.</p>
-    <div class="galeria">
-      <figure><img src="assets/varanda.jpg" alt="Varanda com porta de vidro"><figcaption>Varanda</figcaption></figure>
-      <figure><img src="assets/corredor.jpg" alt="Corredor de acesso aos quartos e banheiro"><figcaption>Corredor</figcaption></figure>
-      <figure><img src="assets/cozinha-bancada.jpg" alt="Cozinha com bancada em granito"><figcaption>Cozinha</figcaption></figure>
-      <figure><img src="assets/cozinha-pia.jpg" alt="Cozinha com pia e revestimento"><figcaption>Cozinha</figcaption></figure>
-      <figure><img src="assets/area-servico.jpg" alt="Área de serviço"><figcaption>Área de serviço</figcaption></figure>
-      <figure><img src="assets/quarto-1.jpg" alt="Quarto com janela"><figcaption>Quarto</figcaption></figure>
-      <figure><img src="assets/quarto-2.jpg" alt="Quarto com piso porcelanato"><figcaption>Quarto</figcaption></figure>
-      <figure><img src="assets/quarto-3.jpg" alt="Quarto com janela ao fundo"><figcaption>Quarto</figcaption></figure>
-      <figure><img src="assets/banheiro-1.jpg" alt="Banheiro com box e pia com bancada em granito"><figcaption>Banheiro</figcaption></figure>
-      <figure><img src="assets/banheiro-2.jpg" alt="Banheiro com janela"><figcaption>Banheiro</figcaption></figure>
-      <figure><img src="assets/banheiro-3.jpg" alt="Banheiro com revestimento"><figcaption>Banheiro</figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container fin">
-    <div>
-      <h2>Financiamento</h2>
-      <p class="lead">Este imóvel pode ser financiado pela Caixa Econômica Federal. As condições e a aprovação dependem da análise de crédito. Fale com a equipe para simular.</p>
-    </div>
-    <ul>
-      <li>Atendimento direto com a construtora</li>
-      <li>Orientação para o financiamento pela Caixa</li>
-      <li>Imóvel novo, com acabamento pronto</li>
-    </ul>
-  </div>
-</section>
-
-<section class="fundo-claro">
-  <div class="container">
-    <h2>Outra unidade disponível</h2>
-    <p class="lead">Há mais uma unidade à venda no mesmo empreendimento.</p>
-    <div class="card unidade">
-      <div>
-        <strong>Outra unidade</strong>
-        <div class="preco-m">R$ 180.000</div>
-        <div>Avaliado em R$ 190.000</div>
+    <div class="detalhe" id="detalhe">
+      <div class="galeria" id="galeria"></div>
+      <div class="info">
+        <span class="tipo" id="d-tipo"></span>
+        <h3 id="d-titulo"></h3>
+        <div class="preco" id="d-preco"></div>
+        <span class="aval" id="d-aval"></span>
+        <p class="end" id="d-end"></p>
+        <p class="financ" id="d-financ"></p>
+        <a class="btn" id="d-btn" href="https://wa.me/5583998930359?text=Ol%C3%A1!%20Bom%20dia!%20Vi%20sua%20p%C3%A1gina%20de%20an%C3%BAncio%20da%20venda%20do%20im%C3%B3vel%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener"><svg class="wa-ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>Quero saber mais pelo WhatsApp</a>
       </div>
-      <a class="btn" style="margin-top:0" href="https://wa.me/5583998930359?text=Ol%C3%A1!%20Bom%20dia!%20Tenho%20interesse%20na%20outra%20unidade%20dispon%C3%ADvel.%20Podem%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F" target="_blank" rel="noopener"><svg class="wa-ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>Quero saber mais</a>
     </div>
   </div>
 </section>
@@ -179,7 +153,7 @@
   <div class="container">
     <h2>Agende sua visita</h2>
     <p>Atendimento pelo WhatsApp da AMD Construtora.</p>
-    <a class="btn" href="https://wa.me/5583998930359?text=Ol%C3%A1!%20Bom%20dia!%20Vi%20sua%20p%C3%A1gina%20de%20an%C3%BAncio%20da%20venda%20do%20apartamento%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener"><svg class="wa-ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>Chamar no WhatsApp: (83) 99893-0359</a>
+    <a class="btn" href="https://wa.me/5583998930359?text=Ol%C3%A1!%20Bom%20dia!%20Vi%20sua%20p%C3%A1gina%20de%20an%C3%BAncio%20da%20venda%20do%20im%C3%B3vel%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener"><svg class="wa-ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>Chamar no WhatsApp: (83) 99893-0359</a>
   </div>
 </section>
 
@@ -187,12 +161,59 @@
   <div class="container">
     <strong>AMD Construtora</strong>
     <span>CNPJ 29.986.998/0001-27</span>
-    <span>Endereço do imóvel: R. China, 138 – Bairro das Indústrias, João Pessoa – PB, 58083-615</span>
     <span>Escritório: R. Doutor Manoel Lopes de Carvalho, nº 714, sala 203, CX Postal 82, Bairro Geisel</span>
   </div>
 </footer>
 
-<a class="flutuante" aria-label="WhatsApp" href="https://wa.me/5583998930359?text=Ol%C3%A1!%20Bom%20dia!%20Vi%20sua%20p%C3%A1gina%20de%20an%C3%BAncio%20da%20venda%20do%20apartamento%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener"><svg class="wa-ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+<a class="flutuante" aria-label="WhatsApp" href="https://wa.me/5583998930359?text=Ol%C3%A1!%20Bom%20dia!%20Vi%20sua%20p%C3%A1gina%20de%20an%C3%BAncio%20da%20venda%20do%20im%C3%B3vel%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener"><svg class="wa-ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+
+<script>
+  var WA = "https://wa.me/5583998930359?text=Ol%C3%A1!%20Bom%20dia!%20Vi%20sua%20p%C3%A1gina%20de%20an%C3%BAncio%20da%20venda%20do%20im%C3%B3vel%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.";
+  var APTO_END = "R. China, 138 – Bairro das Indústrias, João Pessoa – PB, 58083-615";
+  var APTO_FOTOS = ["varanda","corredor","cozinha-bancada","cozinha-pia","area-servico","quarto-1","quarto-2","quarto-3","banheiro-1","banheiro-2","banheiro-3"].map(function(n){return "assets/"+n+".jpg";});
+  var CASA_FOTOS = [];
+  for (var i = 1; i <= 14; i++) { CASA_FOTOS.push("assets/casa-" + (i < 10 ? "0" : "") + i + ".jpg"); }
+  var APTO_FIN = "Pode ser financiado pela Caixa Econômica Federal. As condições dependem da análise de crédito.";
+
+  var unidades = {
+    "apto-varanda": { tipo: "Apartamento", titulo: "Apartamento com varanda", preco: "R$ 185.000", aval: "Avaliado em R$ 195.000", end: APTO_END, financ: APTO_FIN, fotos: APTO_FOTOS },
+    "apto":         { tipo: "Apartamento", titulo: "Apartamento", preco: "R$ 180.000", aval: "Avaliado em R$ 190.000", end: APTO_END, financ: APTO_FIN, fotos: APTO_FOTOS },
+    "casa-1":       { tipo: "Casa", titulo: "Casa", preco: "Consulte o valor", aval: "", end: "R. França, 127 – Bairro das Indústrias, João Pessoa – PB, 58083-609", financ: "", fotos: CASA_FOTOS },
+    "casa-2":       { tipo: "Casa", titulo: "Casa", preco: "Consulte o valor", aval: "", end: "R. França, 127 – Bairro das Indústrias, João Pessoa – PB, 58083-609", financ: "", fotos: CASA_FOTOS }
+  };
+
+  function mostrar(id) {
+    var u = unidades[id];
+    if (!u) return;
+    document.querySelectorAll(".opcao").forEach(function(b){
+      b.classList.toggle("ativo", b.getAttribute("data-id") === id);
+    });
+    var g = document.getElementById("galeria");
+    g.innerHTML = "";
+    u.fotos.forEach(function(src){
+      var img = document.createElement("img");
+      img.src = src;
+      img.alt = u.titulo;
+      img.loading = "lazy";
+      g.appendChild(img);
+    });
+    document.getElementById("d-tipo").textContent = u.tipo;
+    document.getElementById("d-titulo").textContent = u.titulo;
+    document.getElementById("d-preco").textContent = u.preco;
+    var aval = document.getElementById("d-aval");
+    aval.textContent = u.aval;
+    aval.style.display = u.aval ? "inline-block" : "none";
+    document.getElementById("d-end").textContent = "Endereço: " + u.end;
+    var fin = document.getElementById("d-financ");
+    fin.textContent = u.financ;
+    fin.style.display = u.financ ? "block" : "none";
+  }
+
+  document.querySelectorAll(".opcao").forEach(function(b){
+    b.addEventListener("click", function(){ mostrar(b.getAttribute("data-id")); });
+  });
+  mostrar("apto-varanda");
+</script>
 
 </body>
 </html>
